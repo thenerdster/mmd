@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="no-js" >
+    <head>
+        <!-- meta charset -->
+        <meta charset="utf-8">
+        <!-- site title -->
+        <title>MMD | Players</title>
+        <!-- meta description -->
+        <meta name="description" content="">
+        <!-- mobile viwport meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- fevicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+        <!-- ================================
+        CSS Files
+        ================================= -->
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="/static/html/phantom/themes/dark/css/themefisher-fonts.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/static/html/phantom/themes/dark/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/static/html/phantom/themes/dark/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/html/phantom/themes/dark/css/main.css">
+        <link rel="stylesheet" href="/static/html/phantom/themes/dark/css/dark.css">
+        <link id="color-changer" rel="stylesheet" href="/static/html/phantom/themes/dark/css/colors/color-0.css">
+    </head>
+
+    <body class="dark">
+
+        <div class="preloader">
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+        </div>
+
+        <section class="site-wrapper">
+            <div class="pt-table">
+                <div class="pt-tablecell page-services relative">
+                    <a href="/" class="page-close"><i class="tf-ion-close"></i></a>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-lg-offset-1 col-lg-10">
+                                <div class="page-title text-center">
+                                    <h2>DINNER <span class="primary">GUESTS</span> <span class="title-bg">WHO DON IT?</span></h2>
+                                    <p>THESE ARE ALL THE GUESTS THAT HAVE BEEN ANNOUNCED SO FAR.</p>
+                                </div>
+
+                                {% for p in players %}
+                                   <div class="player-card" style="text-align: center;">
+                                       <span class="icon">
+                                           <i class="fas fa-male" style="font-size: xxx-large"></i>
+                                       </span>
+                                       <a href="/players/{{ p.id }}"><div class="playername">
+                                            {{ p.first_name }} {{ p.last_name }}
+                                       </div></a>
+                                   </div>
+
+                                {% endfor %}
+
+                            </div> <!-- /.col-xs-12 -->
+
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+
+                    <nav class="page-nav clear">
+                        <div class="container">
+                            <div class="flex flex-middle space-between">
+                                <span class="prev-page"><a href="/" class="link">&larr; Prev Page</a></span>
+                                <span class="copyright hidden-xs">Copyright &copy; 2021 MMD, All Rights Reserved.</span>
+                                <span class="next-page"><a href="/" class="link">Next Page &rarr;</a></span>
+                            </div>
+                        </div>
+                        <!-- /.page-nav -->
+                    </nav>
+                    <!-- /.container -->
+
+                </div> <!-- /.pt-tablecell -->
+            </div> <!-- /.pt-table -->
+        </section> <!-- /.site-wrapper -->
+
+        <!-- ================================
+        JavaScript Libraries
+        ================================= -->
+        <script src="/static/html/phantom/themes/dark/js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/vendor/bootstrap.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/jquery.easing.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/isotope.pkgd.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/jquery.nicescroll.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/owl.carousel.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/jquery-validation.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/form.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/main.js"></script>
+    </body>
+</html>
