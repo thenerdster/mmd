@@ -1,13 +1,15 @@
 from django.shortcuts import render
 from base.models import *
+from base.forms import *
+from django.views.generic.edit import CreateView
 
 # Example dynamic data
 from datetime import date
 
-# Tailwinds CSS homepage
+
+
 def homepage(request):
     return render(request, 'base/homepage.html',)
-
 
 
 def rules(request):
@@ -22,7 +24,12 @@ def players(request):
         'players': players,
     })
 
+def player_detail(request, id):
+    the_player = Characters.objects.get(id=id)
 
+    return render(request, 'base/player_detail.html', {
+        'the_player': the_player,
+    })
 
 def secret(request):
     return render(request, 'base/secret.html',)
@@ -47,10 +54,8 @@ def notes(request):
     return render(request, 'base/notes.html',)
 
 
-
 def solve(request):
     return render(request, 'base/solve.html',)
-
 
 
 # Bootstrap Homepage

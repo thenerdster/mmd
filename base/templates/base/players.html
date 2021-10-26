@@ -46,22 +46,26 @@
                                     <h2>DINNER <span class="primary">GUESTS</span> <span class="title-bg">WHO DON IT?</span></h2>
                                     <p>THESE ARE ALL THE GUESTS THAT HAVE BEEN ANNOUNCED SO FAR.</p>
                                 </div>
+                            </div>
+                        </div>
 
-                                {% for p in players %}
-                                   <div class="player-card" style="text-align: center;">
-                                       <span class="icon">
-                                           <i class="fas fa-male" style="font-size: xxx-large"></i>
-                                       </span>
-                                       <a href="/players/{{ p.id }}"><div class="playername">
-                                            {{ p.first_name }} {{ p.last_name }}
-                                       </div></a>
-                                   </div>
+                        {% for p in players %}
+                        <a href="/player_detail/{{ p.id }}">
+                           <div class="col-md-3 player-card" style="text-align: center; padding: 25px;">
+                               <span class="icon">
+                                   {% if p.alive == False %}
+                                   <i class="fas fa-male" style="font-size: xxx-large; color: #911313;"></i>
+                                   {% else %}
+                                   <i class="fas fa-male" style="font-size: xxx-large;"></i>
+                                   {% endif %}
+                               </span>
+                               <div class="playername">
+                                    {{ p.first_name }} {{ p.last_name }}
+                               </div>
+                           </div>
+                        </a>
 
-                                {% endfor %}
-
-                            </div> <!-- /.col-xs-12 -->
-
-                        </div> <!-- /.row -->
+                        {% endfor %}
                     </div> <!-- /.container -->
 
                     <nav class="page-nav clear">

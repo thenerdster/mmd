@@ -12,5 +12,6 @@ urlpatterns = [
     path('guess/', guess, name='guess'),
     path('notes/', notes, name='notes'),
     path('solve/', solve, name='solve'),
+    path('player_detail/<int:id>', player_detail, name='player_detail'),
 ]
 

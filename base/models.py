@@ -24,3 +24,14 @@ class Clues(models.Model):
 
     def __str__(self):
         return F"CLUE: {self.name}"
+
+class Solves(models.Model):
+    class Meta:
+        verbose_name_plural = "Solves"
+    name = models.CharField(max_length=100, blank=False, null=True)
+    whodonit = models.TextField(blank=True, null=True)
+    date_added = models.DateTimeField(auto_now=True, blank=True, null=True)
+
+
+    def __str__(self):
+        return F"{self.first_name} {self.last_name}"

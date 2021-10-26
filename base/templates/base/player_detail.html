@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <!-- meta charset -->
+        <meta charset="utf-8">
+        <!-- site title -->
+        <title>MMD | Players</title>
+        <!-- meta description -->
+        <meta name="description" content="">
+        <!-- mobile viwport meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- fevicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+        <!-- ================================
+        CSS Files
+        ================================= -->
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="/static/html/phantom/themes/dark/css/themefisher-fonts.min.css">
+        <link rel="stylesheet" href="/static/html/phantom/themes/dark/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/html/phantom/themes/dark/css/main.css">
+        <link rel="stylesheet" href="/static/html/phantom/themes/dark/css/dark.css">
+        <link id="color-changer" rel="stylesheet" href="/static/html/phantom/themes/dark/css/colors/color-0.css">
+    </head>
+
+    <body class="dark">
+
+        <div class="preloader">
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+        </div>
+
+
+        <main class="site-wrapper">
+            <div class="pt-table">
+                <div class="pt-tablecell page-about relative">
+                    <!-- .close -->
+                    <a href="/" class="page-close"><i class="tf-ion-close"></i></a>
+                    <!-- /.close -->
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                                <div class="page-title text-center">
+                                    <h2> {{ the_player.first_name }} <span class="primary">{{ the_player.last_name }}</span> <span class="title-bg">Name</span></h2>
+                                    <p>{{ the_player.bio }}</p>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="about-author">
+                                    <div class="author-desc">
+                                        <p><b>Net Worth:</b> {{ the_player.net_worth }}</p>
+                                        <p><b>Occupation:</b> {{ the_player.occupation }}</p>
+                                        <p><b>Alive or Dead?:</b>{% if the_player.alive == True %} Alive.. for now.
+                                            {% else %}{ the_player.first_name }} HAS BEEN MURDERED!{% endif %}</p>
+                                    </div>
+                                    <!-- /.author-desc -->
+                                </div> <!-- /.about-author -->
+                                <p>Relation to the victim: <br>They fought together in the war.</p>
+                            </div> <!-- /.col -->
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="section-title clear">
+                                    <h3>Implicating factors</h3>
+                                </div>
+                                <div class="skill-wrapper">
+                                    <div class="progress clear">
+                                        <div class="skill-name">Clues Suggest</div>
+                                        <div class="skill-bar">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="skill-lavel" data-skill-value="40%"></div>
+                                    </div> <!-- /.progress -->
+                                    <div class="progress clear">
+                                        <div class="skill-name">Alibi</div>
+                                        <div class="skill-bar">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="skill-lavel" data-skill-value="78%"></div>
+                                    </div> <!-- /.progress -->
+                                    <div class="progress clear">
+                                        <div class="skill-name">Motive</div>
+                                        <div class="skill-bar">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="skill-lavel" data-skill-value="85%"></div>
+                                    </div> <!-- /.progress -->
+                                    <div class="progress clear">
+                                        <div class="skill-name">Ability</div>
+                                        <div class="skill-bar">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="skill-lavel" data-skill-value="95%"></div>
+                                    </div> <!-- /.progress -->
+                                    <div class="progress clear">
+                                        <div class="skill-name">Guilty Vibe</div>
+                                        <div class="skill-bar">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="skill-lavel" data-skill-value="70%"></div>
+                                    </div> <!-- /.progress -->
+                                    <div class="progress clear">
+                                        <div class="skill-name">Total Probability</div>
+                                        <div class="skill-bar">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="skill-lavel" data-skill-value="75%"></div>
+                                    </div> <!-- /.progress -->
+                                </div> <!-- /.skill-wrapper -->
+                            </div> <!-- /.col -->
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+
+                    <nav class="page-nav clear">
+                        <div class="container">
+                            <div class="flex flex-middle" style="text-align: center;">
+                                <span class="copyright hidden-xs" style="text-align: center;">Copyright &copy; 2021 MMD, All Rights Reserved.</span>
+                            </div>
+                        </div>
+                        <!-- /.page-nav -->
+                    </nav>
+                    <!-- /.container -->
+                </div> <!-- /.pt-tablecell -->
+            </div> <!-- /.pt-table -->
+        </main> <!-- /.site-wrapper -->
+
+        <!-- ================================
+        JavaScript Libraries
+        ================================= -->
+        <script src="/static/html/phantom/themes/dark/js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/vendor/bootstrap.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/jquery.easing.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/isotope.pkgd.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/jquery.nicescroll.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/owl.carousel.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/jquery-validation.min.js"></script>
+        <script src="/static/html/phantom/themes/dark/js/main.js"></script>
+    </body>
+</html>
