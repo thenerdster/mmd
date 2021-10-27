@@ -9,6 +9,7 @@ class Characters(models.Model):
     bio = models.TextField(blank=True, null=True)
     occupation = models.CharField(max_length=100, blank=True, null=True)
     net_worth = models.CharField(max_length=100, blank=False, null=True)
+    relation = models.CharField(max_length=100, blank=False, null=True)
     alive = models.BooleanField(default=True)
     is_murderer = models.BooleanField(default=False)
 
